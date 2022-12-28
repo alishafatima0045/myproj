@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            text-align: center;
+            background-image: linear-gradient(rgb(88, 88, 224),rgb(130, 69, 69),pink );
+        }
+        div
+        {
+            display: flex;
+            justify-content: center;
+      
+        }
+        
+        #btn
+        {
+            margin-top: 20px;
+            height: 40px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius:20px;
+        }
+        #showdata
+        {
+       
+            height: 350px;
+            width: 80%;
+           border: 2px solid black;
+           border-radius: 30px;
+           margin-top: 20px;
+           display: none;
+           font-size: 35px;
+            padding-top:30px;
+            color: aliceblue;
+            box-shadow: 10px 10px 20px;
+        }
+      #container
+      {
+display: none;
+      }
+    </style>
+</head>
+<body>
+    <h1>Employee portal</h1>
+    <div>
+    <input type="radio" name="rad" id="ad" style="margin: 20px;"><h3>Admin</h3> 
+    <input type="radio" name="rad" id="tea" style="margin: 20px;"><h3>Teacher</h3>
+    <input type="radio" name="rad" id="stu" style="margin: 20px;"><h3>Student </h3>
+    </div>
+    <input type="button" value="View details" id="btn" onclick="show()"> 
+    <center>
+        <div id="showdata">
+            <img src="admin.jfif" alt="" id="image" height="100px" width="100px">
+            <p id="show"></p>
+    </div>
+       
+    </center>
+</body>
+<script>     
+    var student=new Object()
+     student.name="Ahmed";
+  student.contact="45454123556";
+  student.image="D:\batch aqsa\admin.jpg";
+
+    var teacher=new Object()
+    teacher.name="Kishwar";
+    teacher.contact="45454123556";
+
+    var admin=new Object()
+    admin.name="Minha";
+    admin.contact="45454123556";
+
+    function show()
+    {
+var rad1=document.getElementById("ad").checked;
+var rad2=document.getElementById("tea").checked;
+var rad3=document.getElementById("stu").checked;
+
+if(rad1)
+{
+    
+    document.getElementById("showdata").style.display="block";
+
+    document.getElementById("show").innerHTML="<b>Name is : </b>"+admin.name+"<br>"+"<b>Contact : </b>"+admin.contact;
+}
+else if(rad2)
+{
+ 
+    document.getElementById("showdata").style.display="block";
+    document.getElementById("showdata").innerHTML=teacher.name+"<br>"+teacher.contact;
+}
+else if(rad3)
+{
+    document.getElementById("showdata").style.display="block";
+    document.getElementById("showdata").innerHTML=student.name+"<br>"+student.contact;
+}
+
+    }
+</script>
+</html>

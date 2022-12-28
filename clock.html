@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.container
+{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    color: antiquewhite;
+    position: absolute;
+    top: 45%;
+    right:50%;
+    transform: translate(50%,-50%);
+    font-size: 150px;
+    white-space: nowrap;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+        <span id="session">AM</span>
+        <span>id="date"</span>
+        <span>id="month"</span>
+        <span>id="year"</span>
+    </div>
+    <script>
+       function displaydate()
+       {
+        var datetime=new Date();
+        var hrs=datetime.getHours();
+        var min=datetime.getMinutes();
+        var sec=datetime.getSeconds();
+        var session=document.getElementById("session");
+        var date=date.get
+        if(hrs<=12)
+        {
+            session.innerHTML="PM";
+        }
+        else
+        {
+            session.innerHTML="AM";
+        }
+        if(hrs>12)
+        {
+            hrs=hrs-12;
+        }
+       
+document.getElementById("hours").innerHTML=hrs;
+document.getElementById("minutes").innerHTML=min;
+document.getElementById("seconds").innerHTML=sec;
+document.getElementById("date").innerHTML=sec;
+document.getElementById("month").innerHTML=sec;
+document.getElementById("year").innerHTML=sec;
+       }
+     setInterval(displaydate,100);
+    </script>
+</body>
+</html>
+</body>
+</html>
